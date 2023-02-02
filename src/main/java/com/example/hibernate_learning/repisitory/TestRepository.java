@@ -20,16 +20,16 @@ public class TestRepository {
 
     @Transactional
     public List getPersonsByCity(String city){
-        return personsRepository.findByCityOfLiving(city);
+        return personsRepository.findPersonsByCity(city);
     }
     @Transactional
     public List getPersonsByAgeAndSort(int age){
-        return personsRepository.findByPersonsKey_AgeBefore(age);
+        return personsRepository.findPersonByAgeBefore(age);
     }
 
     @Transactional
     public Optional<Persons> getPersonsByNameAndSurname(String name,String surname){
-        return personsRepository.findByPersonsKey_NameAndPersonsKey_Surname(name,surname);
+        return personsRepository.findPersonByNameAndSurname(name,surname);
     }
 
 }
