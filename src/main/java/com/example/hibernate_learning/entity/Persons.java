@@ -12,10 +12,12 @@ public class Persons {
     @EmbeddedId
     private PersonsKey personsKey;
 
-    @Column
-    private String city_of_living;
+    @Column(name = "city_of_living")
+    private String cityOfLiving;
 
     @Column
     private String phone_number;
+
+
 
 }
